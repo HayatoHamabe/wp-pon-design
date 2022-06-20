@@ -34,9 +34,9 @@
         </div>
 
         <div class="p-contact-form__body">
-          <form class="c-form" action="post">
+          <div class="c-form">
             <?php echo apply_shortcodes('[contact-form-7 id="2311" title="お問い合わせ"]'); ?>
-          </form>
+          </div>
         </div>
       </div>
     </section>

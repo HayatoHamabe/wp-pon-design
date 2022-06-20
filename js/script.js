@@ -66,3 +66,39 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// $("#js-submit").on("click", function () {
+//   let errors = 0;
+
+//   $("#name").removeClass("name-err");
+//   $("#email").removeClass("email-err");
+//   $("#tel").removeClass("tel-err");
+//   $("#contact").removeClass("contact-err");
+
+//   if (!$("#privacy").prop("checked")) {
+//     $("#form-privacy").addClass("polisy-err");
+//     errors += 1;
+//   }
+//   if ($("#name").val() == "") {
+//     $("#form-item-name").addClass("name-err");
+//     errors += 1;
+//   }
+//   if ($("#email").val() == "") {
+//     $("#form-item-email").addClass("email-err");
+//     errors += 1;
+//   }
+//   if ($("#tel").val() == "") {
+//     $("#form-item-tel").addClass("tel-err");
+//     errors += 1;
+//   }
+//   if ($("#contact").val() == "") {
+//     $("#form-item-contact").addClass("contact-err");
+//     errors += 1;
+//   }
+//   $(window).scrollTop();
+//   if (errors !== 0) {
+//     return false;
+//   }
+// });
+
+// $("form").submit(function () {});

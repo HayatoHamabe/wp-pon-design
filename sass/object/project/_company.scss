@@ -2,11 +2,11 @@
 
 .p-company {
   &__inner {
-    background-image: url("/img/bg-circle.png"), url("/img/bg-face.png");
+    background-image: url("../img/bg-circle.png"), url("../img/bg-face.png");
     background-position: center center center center;
     background-size: contain;
     @include g.mq(md) {
-      background-image: url("/img/bg-circle.png");
+      background-image: url("../img/bg-circle.png");
     }
   }
   &__heading {

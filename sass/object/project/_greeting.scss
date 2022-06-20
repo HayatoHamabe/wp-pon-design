@@ -1,12 +1,12 @@
 @use "../../global" as g;
 
 .p-greeting {
-  background-image: url("/img/bg-circle.png"), url("/img/bg-face.png");
+  background-image: url("../img/bg-circle.png"), url("../img/bg-face.png");
   background-position: center 0, center 40px;
   &__inner {
     background-size: contain;
     @include g.mq(md) {
-      background-image: url("/img/bg-circle.png");
+      background-image: url("../img/bg-circle.png");
     }
   }
 

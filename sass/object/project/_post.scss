@@ -56,11 +56,21 @@
     border-bottom: 1px solid #b8aed5;
     color: #b8aed5;
     display: flex;
+    margin-bottom: 20px;
   }
   &__item {
-    padding: 10px 20px;
+    width: 50%;
+    margin: 15px 0;
+    &:first-child {
+      border-right: 1px solid #b8aed5;
+    }
   }
-  &__link {
+  a {
+    display: block;
     color: g.$color-primary;
+    padding: 15px 32px;
+  }
+  &__home {
+    text-align: center;
   }
 }

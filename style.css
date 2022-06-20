@@ -146,20 +146,20 @@ input {
   cursor: default;
 }
 
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
   /* Correct the cursor style of increment and decrement buttons in Chrome */
 }
 
-[type=search] {
+[type="search"] {
   outline-offset: -2px;
   /* Correct the outline style in Safari */
   -webkit-appearance: textfield;
   /* Correct the odd appearance in Chrome and Safari */
 }
 
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
   /* Remove the inner padding in Chrome and Safari on macOS */
 }
@@ -198,35 +198,35 @@ select {
 
 /* Apply cursor pointer to button elements */
 button,
-[type=button],
-[type=reset],
-[type=submit],
-[role=button] {
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
   color: inherit;
   cursor: pointer;
 }
 
 /* Remove inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
 /* Replace focus style removed in the border reset above */
 button:-moz-focusring,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   outline: 1px dotted ButtonText;
 }
 
 button,
-html [type=button],
-[type=reset],
-[type=submit] {
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* Correct the inability to style clickable types in iOS */
 }
@@ -306,7 +306,7 @@ progress {
      # Accessibility
      # ================================================================= */
 /* Specify the progress cursor of updating elements */
-[aria-busy=true] {
+[aria-busy="true"] {
   cursor: progress;
 }
 
@@ -316,7 +316,7 @@ progress {
 }
 
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-[aria-disabled=true] {
+[aria-disabled="true"] {
   cursor: default;
 }
 
@@ -325,7 +325,8 @@ html {
 }
 
 body {
-  font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
   line-height: 1.8;
   color: #333;
   letter-spacing: 0.05em;
@@ -487,7 +488,7 @@ img {
 }
 
 .l-contents--page-recruit {
-  background-image: url("../img/bg-geometry.png");
+  background-image: url("/img/bg-geometry.png");
   background-repeat: repeat;
 }
 
@@ -533,7 +534,12 @@ img {
 
 .c-btn {
   background-size: 200%;
-  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  background-image: linear-gradient(
+    to right,
+    #7633a4 0%,
+    #250d65 51%,
+    #7633a4 100%
+  );
   display: inline-block;
   color: #fff;
   text-align: center;
@@ -573,7 +579,8 @@ img {
   background-color: #fff;
   transition: 0.3s;
 }
-.c-btn-line::before, .c-btn-line::after {
+.c-btn-line::before,
+.c-btn-line::after {
   position: absolute;
   display: block;
   width: 100%;
@@ -592,7 +599,8 @@ img {
 .c-btn-line.is-active {
   background-color: transparent;
 }
-.c-btn-line.is-active::before, .c-btn-line.is-active::after {
+.c-btn-line.is-active::before,
+.c-btn-line.is-active::after {
   top: 0;
   background-color: #fff;
 }
@@ -787,26 +795,6 @@ img {
 .c-form__item {
   margin-bottom: 30px;
 }
-.c-form__item.name-err::after {
-  color: #ff0000;
-  content: "お名前を入力してください";
-  position: relative;
-}
-.c-form__item.email-err::after {
-  color: #ff0000;
-  content: "メールアドレスを正しく入力してください";
-  position: relative;
-}
-.c-form__item.tel-err::after {
-  color: #ff0000;
-  content: "電話番号を入力してください";
-  position: relative;
-}
-.c-form__item.contact-err::after {
-  color: #ff0000;
-  content: "お問い合わせ内容を入力してください";
-  position: relative;
-}
 .c-form__title {
   font-weight: bold;
   display: block;
@@ -852,27 +840,12 @@ img {
   border: 1px solid #c1afde;
   border-radius: 4px;
 }
-.c-form__submit {
-  display: block;
-  margin: 0 auto;
-  background-size: 200%;
-  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.2;
-  text-transform: uppercase;
-  border: 1px solid #fff;
-  border-radius: 9999px;
-  width: 220px;
-  padding: 18px 0;
-}
 
-input[type=tel] {
+input[type="tel"] {
   width: 200px;
 }
 @media screen and (max-width: 768px) {
-  input[type=tel] {
+  input[type="tel"] {
     width: 100%;
   }
 }
@@ -1026,7 +999,6 @@ input[type=tel] {
 
 .p-hero,
 .p-sub-hero {
-  background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1046,7 +1018,7 @@ input[type=tel] {
 }
 @media screen and (max-width: 768px) {
   .p-hero__inner,
-.p-sub-hero__inner {
+  .p-sub-hero__inner {
     text-align: left;
   }
 }
@@ -1059,7 +1031,7 @@ input[type=tel] {
 }
 @media screen and (max-width: 768px) {
   .p-hero__title,
-.p-sub-hero__title {
+  .p-sub-hero__title {
     font-size: 40px;
     font-size: 2.5rem;
     line-height: 1.2;
@@ -1073,7 +1045,7 @@ input[type=tel] {
 }
 @media screen and (max-width: 768px) {
   .p-hero__subtitle,
-.p-sub-hero__subtitle {
+  .p-sub-hero__subtitle {
     font-size: 16px;
     font-size: 1rem;
   }
@@ -1085,7 +1057,7 @@ input[type=tel] {
 }
 @media screen and (max-width: 768px) {
   .p-hero__link,
-.p-sub-hero__link {
+  .p-sub-hero__link {
     margin-top: 30px;
   }
 }
@@ -1101,7 +1073,7 @@ input[type=tel] {
   line-height: 1;
   padding: 10px 10px 90px;
   -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .p-hero__scroll::after,
 .p-sub-hero__scroll::after {
@@ -1273,22 +1245,12 @@ input[type=tel] {
   border-bottom: 1px solid #b8aed5;
   color: #b8aed5;
   display: flex;
-  margin-bottom: 20px;
 }
 .p-post-pager__item {
-  width: 50%;
-  margin: 15px 0;
+  padding: 10px 20px;
 }
-.p-post-pager__item:first-child {
-  border-right: 1px solid #b8aed5;
-}
-.p-post-pager a {
-  display: block;
+.p-post-pager__link {
   color: #391e88;
-  padding: 15px 32px;
-}
-.p-post-pager__home {
-  text-align: center;
 }
 
 .p-post-sns-share__list {
@@ -1409,13 +1371,13 @@ input[type=tel] {
 }
 
 .p-company__inner {
-  background-image: url("../img/bg-circle.png"), url("../img/bg-face.png");
+  background-image: url("/img/bg-circle.png"), url("/img/bg-face.png");
   background-position: center center center center;
   background-size: contain;
 }
 @media screen and (max-width: 768px) {
   .p-company__inner {
-    background-image: url("../img/bg-circle.png");
+    background-image: url("/img/bg-circle.png");
   }
 }
 .p-company__heading {
@@ -1480,7 +1442,7 @@ input[type=tel] {
 }
 .p-recruit-message__img {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 }
 
 .p-recruit__inner {
@@ -1505,7 +1467,6 @@ input[type=tel] {
   margin-bottom: 30px;
 }
 .p-recruit__img-wrapper {
-  background-image: url("../img/recruit.jpg");
   background-size: cover;
   background-position: center center;
   width: 60%;
@@ -1527,16 +1488,10 @@ input[type=tel] {
 }
 
 .p-greeting {
-  background-image: url("../img/bg-circle.png"), url("../img/bg-face.png");
   background-position: center 0, center 40px;
 }
 .p-greeting__inner {
   background-size: contain;
-}
-@media screen and (max-width: 768px) {
-  .p-greeting__inner {
-    background-image: url("../img/bg-circle.png");
-  }
 }
 .p-greeting__heading {
   text-align: center;
@@ -1638,4 +1593,4 @@ input[type=tel] {
   .sp-only {
     display: block;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

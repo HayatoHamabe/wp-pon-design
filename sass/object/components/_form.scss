@@ -3,6 +3,34 @@
 .c-form {
   &__item {
     margin-bottom: 30px;
+    &.name-err {
+      &::after {
+        color: #ff0000;
+        content: "お名前を入力してください";
+        position: relative;
+      }
+    }
+    &.email-err {
+      &::after {
+        color: #ff0000;
+        content: "メールアドレスを正しく入力してください";
+        position: relative;
+      }
+    }
+    &.tel-err {
+      &::after {
+        color: #ff0000;
+        content: "電話番号を入力してください";
+        position: relative;
+      }
+    }
+    &.contact-err {
+      &::after {
+        color: #ff0000;
+        content: "お問い合わせ内容を入力してください";
+        position: relative;
+      }
+    }
   }
   &__title {
     font-weight: bold;
@@ -45,6 +73,26 @@
     padding: 8px;
     border: 1px solid #c1afde;
     border-radius: 4px;
+  }
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    background-size: 200%;
+    background-image: linear-gradient(
+      to right,
+      #7633a4 0%,
+      #250d65 51%,
+      #7633a4 100%
+    );
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 9999px;
+    width: 220px;
+    padding: 18px 0;
   }
 }
 

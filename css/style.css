@@ -825,6 +825,7 @@ img {
   background-color: #fff;
   border: 1px solid #c1afde;
   border-radius: 4px;
+  font-weight: normal;
   width: 300px;
   padding: 8px;
 }

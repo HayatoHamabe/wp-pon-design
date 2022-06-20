@@ -12,8 +12,8 @@
   <div class="p-sub-hero">
     <div class="p-sub-hero__inner">
       <div class="p-sub-hero__heading">
-        <h2 class="p-sub-hero__title">COMPANY</h2>
-        <div class="p-sub-hero__subtitle">私たちについて</div>
+        <h2 class="p-sub-hero__title">news</h2>
+        <div class="p-sub-hero__subtitle">お知らせ</div>
       </div>
     </div>
   </div>

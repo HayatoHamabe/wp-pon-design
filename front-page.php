@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="p-hero__link">
-        <a href="contact.html" class="c-btn c-btn__transparent">contact</a>
+        <a href="<?php echo home_url('contact') ?>" class="c-btn c-btn__transparent">contact</a>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
         <div class="p-news__body">
           <div class="p-news-list">
             <ul class="p-news-list__list">
-              <?php while (have_posts()) : the_post(); ?>
+              <?php while (have_posts() && $num < 5) : the_post(); ?>
                 <li class="p-news-list__item">
                   <div class="p-news-list__heading">
                     <time datetime="<?php echo get_the_date("Y-m-d"); ?>" class="p-news-list__date"><?php echo get_the_date("Y.m.d"); ?></time>
@@ -61,6 +61,7 @@
                     </a>
                   </div>
                 </li>
+                <?php $num++; ?>
               <?php endwhile; ?>
             </ul>
           </div>
@@ -243,7 +244,7 @@
           </div>
         </div>
         <div class="p-contact__link">
-          <a href="contact.html" class="c-btn">more</a>
+          <a href="<?php echo home_url('contact') ?>" class="c-btn">more</a>
         </div>
       </div>
     </section>

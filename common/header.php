@@ -17,7 +17,7 @@
           <a href="<?php echo home_url('service'); ?>" class="p-global-nav__link">service</a>
         </li>
         <li class="p-global-nav__item">
-          <a href="<?php echo home_url('works'); ?>" class="p-global-nav__link">works</a>
+          <a href="<?php echo get_post_type_archive_link('works'); ?>" class="p-global-nav__link">works</a>
         </li>
         <li class="p-global-nav__item">
           <a href="<?php echo home_url('company'); ?>" class="p-global-nav__link">company</a>

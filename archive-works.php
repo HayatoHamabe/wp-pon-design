@@ -34,7 +34,7 @@
             <div class="p-works-list__img-wrapper">
               <img class="p-works-list__img" src="<?php the_field('works-image'); ?>" alt="Smoothiesta" />
             </div>
-            <div class="p-works-list__text"><?php the_field('works-name'); ?></div>
+            <div class="p-works-list__text"><?php the_field('works-name'); ?> 様</div>
           </div>
         <?php endwhile; ?>
       </div>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="p-contact__link">
-          <a href="contact.html" class="c-btn">more</a>
+          <a href="<?php echo home_url('contact') ?>" class="c-btn">more</a>
         </div>
       </div>
     </section>

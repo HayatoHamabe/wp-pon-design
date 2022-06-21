@@ -104,7 +104,7 @@
           </div>
         </div>
         <div class="p-contact__link">
-          <a href="contact.html" class="c-btn">more</a>
+          <a href="<?php echo home_url('contact') ?>" class="c-btn">more</a>
         </div>
       </div>
     </section>

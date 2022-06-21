@@ -10,17 +10,16 @@
   <?php get_template_part('/common/header') ?>
 
   <div class="p-hero">
-    <?php echo get_post_type_archive_link('works'); ?>
     <div class="p-hero__inner">
       <div class="p-hero__heading">
-        <div class="p-hero__title">index ページです</div>
+        <div class="p-hero__title">WEB DESIGN SPECIALIST</div>
         <div class="p-hero__subtitle">
           お客様の夢を叶える<br class="sp-only" />
           Webサイトを制作
         </div>
       </div>
       <div class="p-hero__link">
-        <a href="contact.html" class="c-btn c-btn__transparent">contact</a>
+        <a href="<?php echo home_url('contact') ?>" class="c-btn c-btn__transparent">contact</a>
       </div>
     </div>
 
@@ -39,7 +38,7 @@
         <div class="p-news__body">
           <div class="p-news-list">
             <ul class="p-news-list__list">
-              <?php while (have_posts()) : the_post(); ?>
+              <?php while (have_posts() && $num < 5) : the_post(); ?>
                 <li class="p-news-list__item">
                   <div class="p-news-list__heading">
                     <time datetime="<?php echo get_the_date("Y-m-d"); ?>" class="p-news-list__date"><?php echo get_the_date("Y.m.d"); ?></time>
@@ -49,9 +48,20 @@
                     </div>
                   </div>
                   <div class="p-new-list__body">
-                    <a href="<?php echo get_the_permalink(); ?>" class="p-news-list__link"><?php the_title(); ?></a>
+                    <a href="<?php the_permalink(); ?>" class="p-news-list__link">
+                      <!-- 文字数 20 文字以上のとき、... で省略表示する -->
+                      <?php
+                      if (mb_strlen($post->post_title) > 20) {
+                        $title = mb_substr($post->post_title, 0, 20);
+                        echo $title . '...';
+                      } else {
+                        echo $post->post_title;
+                      }
+                      ?>
+                    </a>
                   </div>
                 </li>
+                <?php $num++; ?>
               <?php endwhile; ?>
             </ul>
           </div>
@@ -234,7 +244,7 @@
           </div>
         </div>
         <div class="p-contact__link">
-          <a href="contact.html" class="c-btn">more</a>
+          <a href="<?php echo home_url('contact') ?>" class="c-btn">more</a>
         </div>
       </div>
     </section>
@@ -242,9 +252,6 @@
 
   <!-- import footer -->
   <?php get_template_part('/common/footer'); ?>
-
-  <!-- import page-top-link -->
-  <div id="page-top-link"></div>
   <?php get_footer(); ?>
 </body>
 

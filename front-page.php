@@ -38,7 +38,7 @@
         <div class="p-news__body">
           <div class="p-news-list">
             <ul class="p-news-list__list">
-              <?php while (have_posts()) : the_post(); ?>
+              <?php while (have_posts() && $num < 5) : the_post(); ?>
                 <li class="p-news-list__item">
                   <div class="p-news-list__heading">
                     <time datetime="<?php echo get_the_date("Y-m-d"); ?>" class="p-news-list__date"><?php echo get_the_date("Y.m.d"); ?></time>
@@ -61,6 +61,7 @@
                     </a>
                   </div>
                 </li>
+                <?php $num++; ?>
               <?php endwhile; ?>
             </ul>
           </div>

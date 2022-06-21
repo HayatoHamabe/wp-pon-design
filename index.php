@@ -10,6 +10,7 @@
   <?php get_template_part('/common/header') ?>
 
   <div class="p-hero">
+    <?php echo get_post_type_archive_link('works'); ?>
     <div class="p-hero__inner">
       <div class="p-hero__heading">
         <div class="p-hero__title">index ページです</div>

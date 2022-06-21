@@ -29,36 +29,14 @@
   <main class="l-contents">
     <section class="p-works-list-wrapper l-section">
       <div class="p-works-list l-inner">
-        <div class="c-card">
-          <div class="p-works-list__img-wrapper">
-            <img class="p-works-list__img" src="<?php echo get_template_directory_uri(); ?>/img/works/smoothiesta.jpg" alt="Smoothiesta" />
+        <?php while (have_posts()) : the_post() ?>
+          <div class="c-card">
+            <div class="p-works-list__img-wrapper">
+              <img class="p-works-list__img" src="<?php the_field('works-image'); ?>" alt="Smoothiesta" />
+            </div>
+            <div class="p-works-list__text"><?php the_field('works-name'); ?></div>
           </div>
-          <div class="p-works-list__text">Smoothiesta 様</div>
-        </div>
-        <div class="c-card">
-          <div class="p-works-list__img-wrapper">
-            <img class="p-works-list__img" src="<?php echo get_template_directory_uri(); ?>/img/works/web-conference.jpg" alt="Web Conference" />
-          </div>
-          <div class="p-works-list__text">Web Conference 様</div>
-        </div>
-        <div class="c-card">
-          <div class="p-works-list__img-wrapper">
-            <img class="p-works-list__img" src="<?php echo get_template_directory_uri(); ?>/img/works/lamina.jpg" alt="LAMINA" />
-          </div>
-          <div class="p-works-list__text">LAMINA 様</div>
-        </div>
-        <div class="c-card">
-          <div class="p-works-list__img-wrapper">
-            <img class="p-works-list__img" src="<?php echo get_template_directory_uri(); ?>/img/works/citylab.jpg" alt="CITYLab" />
-          </div>
-          <div class="p-works-list__text">CITYLab 様</div>
-        </div>
-        <div class="c-card">
-          <div class="p-works-list__img-wrapper">
-            <img class="p-works-list__img" src="<?php echo get_template_directory_uri(); ?>/img/works/tabilog.jpg" alt="TABILOG" />
-          </div>
-          <div class="p-works-list__text">TABILOG 様</div>
-        </div>
+        <?php endwhile; ?>
       </div>
     </section>
 
